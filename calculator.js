@@ -33,15 +33,25 @@ function operate (num1, num2, operator){
     }
 }
 
-function operate (num1, num2, functionName){
-    functionBank = ["add", "subtract", "multiply", "divide"];
-    if (functionName in functionBank){
-        console.log(eval(`${functionName}(${num1, num2})`));
-    }
-    else{
-        return `${functionName} is not an available option`;
-    }
-}
-operate()
+let num1 = 0
+let num2 = 0
+let operatorButtonVal = ' '
 
-console.log(operate(1,2,'add'))
+
+function equalsClicked(){
+    num1 = document.querySelector('#num1').value
+    num1 = parseInt(num1)
+    operatorButtonVal = document.querySelector('#operator').value
+    num2 = document.querySelector('#num2').value
+    num2 = parseInt(num2)
+
+    let mathOperators = document.getElementById('operator')
+    if(mathOperators.options[mathOperators.selectedIndex].value === "add"){
+    document.getElementById("result").innerHTML = num1+num2}
+    if(mathOperators.options[mathOperators.selectedIndex].value === "subtract"){
+    document.getElementById("result").innerHTML = num1 - num2}
+    if(mathOperators.options[mathOperators.selectedIndex].value === "divide"){
+    document.getElementById("result").innerHTML = num1 / num2}
+    if(mathOperators.options[mathOperators.selectedIndex].value === "multiply"){
+    document.getElementById("result").innerHTML = num1 * num2}
+}

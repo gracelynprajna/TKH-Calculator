@@ -1,35 +1,27 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Calculator</title>
-    <link href="calculator.css" rel="stylesheet">
-    <script src="calculator.js" defer></script>
-
-    <div class="grid">
-        <div class="output">
-            <div class="previous-operand"></div>
-            <div class=""current-operand"></div>
-        </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="span-two">=</button>
-    </div>     
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
+  <form>
+    <!-- num 1 -->
+    <input type="number" id="num1" name="num1">
+    <!-- operator selection -->
+    <select name="operator" id="operator">
+    <option value="add">plus</option>
+    <option value="subtract">minus</option>
+    <option value="multiply">multiplied by</option>
+    <option value="divide">divided by</option>
+  </select>
+  <!-- num 2 -->
+  <input type="number" id="num2" name="quantity">
+  </form>
+  <button id="equals-button" onclick="equalsClicked()">=</button>
+  <h1 id="result">0</h1>
+  <script src="calculator.js"></script>
 </body>
 </html>
-
